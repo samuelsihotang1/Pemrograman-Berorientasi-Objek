@@ -1,0 +1,2 @@
+Belum berhasil menerapkan nested class, local class, annonymous class, atau record.
+Telah berhasil membuat konsep local class
