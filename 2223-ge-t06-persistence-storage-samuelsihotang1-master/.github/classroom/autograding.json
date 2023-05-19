@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "t06&#45;01&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jaksem\r\nshow-accounts\r\ncreate-account#Jaka Sembung#jaksem\r\nshow-accounts\r\ncreate-account#Jaka Sembung#jasemb\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\njasemb|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\njasemb|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "t06&#45;01&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "show-accounts\r\ncreate-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jasemb\r\ncreate-account#Jaka Sembung#jaksem\r\nshow-accounts\r\ncreate-account#Jaka Sembung#jasemb\r\ncreate-account#Milkyman#milkyn\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njasemb|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\njasemb|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\nmilkyn|Milkyman|0.0\r\njaksem|Jaka Sembung|0.0\r\njasemb|Jaka Sembung|0.0\r\nmilkyn|Milkyman|0.0\r\nwirsab|Wiro Sableng|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "t06&#45;01&#45;03",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jasemb\r\ncreate-account#Jaka Sembung#jaksem\r\nshow-accounts\r\nremove-account#jasemb\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njasemb|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\njasemb|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "t06&#45;01&#45;04",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "show-accounts\r\ncreate-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jasemb\r\ncreate-account#Jaka Sembung#jaksem\r\nremove-account#jaksen\r\nshow-accounts\r\ncreate-account#Jaka Sembung#jasemb\r\ncreate-account#Milkyman#milkyn\r\nremove-account#jaksen\r\nremove-account#MILKYN\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njasemb|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\njasemb|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\nmilkyn|Milkyman|0.0\r\njaksem|Jaka Sembung|0.0\r\njasemb|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "t00-01",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "",
+      "output": "Hello, world!\r\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "t00-02",
+      "setup": "make compile",
+      "run": "make -s test_02",
+      "input": "",
+      "output": "Hello, Java!\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 30
+    },
+    {
+      "name": "t00-03",
+      "setup": "make compile",
+      "run": "make -s test_03",
+      "input": "12S19099\r\nWiro Sableng\r\n",
+      "output": "12S19099|Wiro Sableng\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "t00-04",
+      "setup": "make compile",
+      "run": "make -s test_03",
+      "input": "12S19098\r\nJaka Sembung\r\n",
+      "output": "12S19098|Jaka Sembung\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 30
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "t01&#45;01&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account\r\nWiro Sableng\r\nwirsab\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "t01&#45;01&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account\r\nJaka Sembung\r\njaksem\r\n",
+      "output": "jaksem|Jaka Sembung|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "t01&#45;02&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_02",
+      "input": "create-account\r\nWiro Sableng\r\nwirsab\r\ncreate-transaction\r\nwirsab\r\n24.0\r\n2023/02/14 14:14:14\r\nWeekly income\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\n1|wirsab|24.0|2023/02/14 14:14:14|Weekly income|24.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 30
+    },
+    {
+      "name": "t01&#45;02&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_02",
+      "input": "create-account\r\nJaka Sembung\r\njaksem\r\ncreate-transaction\r\njaksem\r\n29.2\r\n2023/02/14 14:14:14\r\nRemote work\r\n",
+      "output": "jaksem|Jaka Sembung|0.0\r\n1|jaksem|29.2|2023/02/14 14:14:14|Remote work|29.2\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 30
+    }
+  ]
+}

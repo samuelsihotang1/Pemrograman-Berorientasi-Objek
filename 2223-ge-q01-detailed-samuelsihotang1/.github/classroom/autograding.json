@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "q01&#45;01&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\nshow-account#jaksem\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|43.7\r\n1|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n3|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n2|jaksem|-8.4|2023/02/15 15:18:15|SIM credit\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "q01&#45;01&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-account#Wiro Sableng#wirsab\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\ncreate-transaction#wirsab#33.5#2023/02/21 00:00:04#Allowance\r\nshow-account#jaksem\r\ncreate-transaction#wirsab#-11.1#2023/02/22 14:05:00#Lunch\r\nshow-account#wirsab\r\n---\r\n",
+      "output": "jaksem|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|43.7\r\n1|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n3|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n2|jaksem|-8.4|2023/02/15 15:18:15|SIM credit\r\nwirsab|Wiro Sableng|17.4\r\n4|wirsab|-5.0|2023/02/16 10:15:41|Tax\r\n5|wirsab|33.5|2023/02/21 00:00:04|Allowance\r\n6|wirsab|-11.1|2023/02/22 14:05:00|Lunch\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "q01&#45;02&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_02",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|43.7\r\n1|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n3|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n2|jaksem|-8.4|2023/02/15 15:18:15|SIM credit\r\nwirsab|Wiro Sableng|-5.0\r\n4|wirsab|-5.0|2023/02/16 10:15:41|Tax\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "q01&#45;02&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_02",
+      "input": "create-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-account#Wiro Sableng#wirsab\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-transaction#wirsab#33.5#2023/02/21 00:00:04#Allowance\r\nshow-account#jaksem\r\nfind-account#jaksem\r\ncreate-transaction#wirsab#-11.1#2023/02/22 14:05:00#Lunch\r\nshow-accounts\r\n---\r\n",
+      "output": "jaksem|Jaka Sembung|0.0\r\nwirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|43.7\r\n1|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n2|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n4|jaksem|-8.4|2023/02/15 15:18:15|SIM credit\r\njaksem|Jaka Sembung|43.7\r\njaksem|Jaka Sembung|43.7\r\n1|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n2|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n4|jaksem|-8.4|2023/02/15 15:18:15|SIM credit\r\nwirsab|Wiro Sableng|17.4\r\n3|wirsab|-5.0|2023/02/16 10:15:41|Tax\r\n5|wirsab|33.5|2023/02/21 00:00:04|Allowance\r\n6|wirsab|-11.1|2023/02/22 14:05:00|Lunch\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    }
+  ]
+}

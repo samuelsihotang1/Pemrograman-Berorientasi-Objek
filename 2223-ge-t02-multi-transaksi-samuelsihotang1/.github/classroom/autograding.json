@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "t02&#45;01&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jaksem\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "t02&#45;01&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Milkyman#milky\r\ncreate-account#Jaka Sembung#jaksem\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\nmilky|Milkyman|0.0\r\njaksem|Jaka Sembung|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "t02&#45;02&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_02",
+      "input": "create-account#Wiro Sableng#wirsab\r\nfind-account#Milkyman\r\ncreate-account#Jaka Sembung#jaksem\r\nfind-account#JAKSEM\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "t02&#45;02&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_02",
+      "input": "create-account#Wiro Sableng#wirsab\r\nfind-account#Milkyman\r\ncreate-account#Milkyman#milky\r\ncreate-account#Jaka Sembung#jaksem\r\nfind-account#JAKSEM\r\nfind-account#milkyman\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\nmilky|Milkyman|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "t02&#45;03&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_03",
+      "input": "create-account#Wiro Sableng#wirsab\r\nfind-account#Milkyman\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\nfind-account#JAKSEM\r\ncreate-transaction#congcong#-5.0#2023/02/16 10:15:41#Tax\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|43.7\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "t02&#45;03&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_03",
+      "input": "create-account#Wiro Sableng#wirsab\r\nfind-account#Milkyman\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-account#Milkyman#milky\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-transaction#milky#10.4#2023/02/15 21:10:00#Sputipi\r\nfind-account#milky\r\nfind-account#JAKSEM\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\nmilky|Milkyman|0.0\r\nmilky|Milkyman|10.4\r\njaksem|Jaka Sembung|43.7\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 20
+    }
+  ]
+}

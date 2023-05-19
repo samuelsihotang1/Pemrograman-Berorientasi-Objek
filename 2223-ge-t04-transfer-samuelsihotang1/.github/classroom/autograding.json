@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "t04&#45;01&#45;01",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\nshow-account#jaksem\r\nshow-account#wirsab\r\ncreate-transaction#jaksem#wirsab#12.0#2023/02/21 13:11:11#Lunch\r\nshow-account#jaksem\r\nshow-account#wirsab\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|43.7\r\n1|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n3|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n2|jaksem|-8.4|2023/02/15 15:18:15|SIM credit\r\nwirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|31.7\r\n1|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n3|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n2|jaksem|-8.4|2023/02/15 15:18:15|SIM credit\r\n4|jaksem|wirsab|12.0|2023/02/21 13:11:11|Lunch\r\nwirsab|Wiro Sableng|12.0\r\n4|jaksem|wirsab|12.0|2023/02/21 13:11:11|Lunch\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "t04&#45;01&#45;02",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#wirsab#12.0#2023/02/21 13:11:11#Lunch\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\ncreate-account#Milkyman#milkyn\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#milkyn#100.00#2023/03/11 08:00:40#Research grant (March)\r\ncreate-transaction#milkyn#8.6#2023/03/11 08:00:20#Assistancy paycheck\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\nmilkyn|Milkyman|0.0\r\njaksem|Jaka Sembung|52.1\r\n2|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n1|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\nmilkyn|Milkyman|108.6\r\n4|milkyn|8.6|2023/03/11 08:00:20|Assistancy paycheck\r\n3|milkyn|100.0|2023/03/11 08:00:40|Research grant (March)\r\nwirsab|Wiro Sableng|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "t04&#45;01&#45;03",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:18:15#SIM credit\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\ncreate-account#Milkyman#milkyn\r\ncreate-transaction#jaksem#wirsab#-12.0#2023/02/21 13:11:11#Lunch\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#milkyn#100.00#2023/03/11 08:00:40#Research grant (March)\r\ncreate-transaction#milkyn#8.6#2023/03/11 08:00:20#Assistancy paycheck\r\nremove-account#jaksem\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\njaksem|Jaka Sembung|0.0\r\nmilkyn|Milkyman|0.0\r\nmilkyn|Milkyman|108.6\r\n4|milkyn|8.6|2023/03/11 08:00:20|Assistancy paycheck\r\n3|milkyn|100.0|2023/03/11 08:00:40|Research grant (March)\r\nwirsab|Wiro Sableng|0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "t04&#45;01&#45;04",
+      "setup": "make compile",
+      "run": "make -s test_01",
+      "input": "create-account#Wiro Sableng#wirsab\r\ncreate-account#Milkyman#milkyn\r\ncreate-account#Jaka Sembung#jaksem\r\ncreate-transaction#jaksem#37.1#2023/02/15 15:15:15#Book refund\r\ncreate-transaction#wirsab#-5.0#2023/02/16 10:15:41#Tax\r\ncreate-transaction#jaksem#-8.4#2023/02/15 15:12:15#SIM credit\r\ncreate-transaction#jaksem#milkyn#1.2#2023/02/14 10:04:11#Pre-lunch\r\nremove-account#wirsab\r\ncreate-transaction#milkyn#100.00#2023/03/11 08:00:40#Research grant (March)\r\ncreate-transaction#jaksem#15.0#2023/02/14 14:14:14#Weekly income\r\ncreate-transaction#jaksem#milkyn#4.4#2023/02/24 15:04:51#Slide copy\r\ncreate-transaction#milkyn#8.6#2023/03/11 08:00:20#Assistancy paycheck\r\nshow-accounts\r\n---\r\n",
+      "output": "wirsab|Wiro Sableng|0.0\r\nmilkyn|Milkyman|0.0\r\njaksem|Jaka Sembung|0.0\r\njaksem|Jaka Sembung|38.1\r\n3|jaksem|milkyn|1.2|2023/02/14 10:04:11|Pre-lunch\r\n5|jaksem|15.0|2023/02/14 14:14:14|Weekly income\r\n2|jaksem|-8.4|2023/02/15 15:12:15|SIM credit\r\n1|jaksem|37.1|2023/02/15 15:15:15|Book refund\r\n6|jaksem|milkyn|4.4|2023/02/24 15:04:51|Slide copy\r\nmilkyn|Milkyman|114.2\r\n3|jaksem|milkyn|1.2|2023/02/14 10:04:11|Pre-lunch\r\n6|jaksem|milkyn|4.4|2023/02/24 15:04:51|Slide copy\r\n7|milkyn|8.6|2023/03/11 08:00:20|Assistancy paycheck\r\n4|milkyn|100.0|2023/03/11 08:00:40|Research grant (March)\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 25
+    }
+  ]
+}
