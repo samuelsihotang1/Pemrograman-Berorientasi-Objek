@@ -69,3 +69,5 @@ Kriteria video presentasi:
 
 ## How to submit?
 Please see https://youtu.be/ZOhgmVjWFyo
+
+![Result](https://github.com/samuelsihotang1/Pemrograman-Berorientasi-Objek/assets/89495323/527a2707-be0b-460b-9580-211dc04f5ffb)
