@@ -26,6 +26,7 @@ show-account#wirsab
 ---
 
 ```
+![Result](https://github.com/samuelsihotang1/Pemrograman-Berorientasi-Objek/assets/89495323/97020aa3-3f79-485d-9af6-cc42485a84f5)
 
 Berikut adalah contoh luaran dari kombinasi input di atas. Perhatikan *announcement* terhadap pembatalan transaksi dengan id ```1``` tidak dapat ditindaklanjuti karena akan menyebabkan **negative balance**.
 
@@ -69,6 +70,7 @@ show-accounts
 ---
 
 ```
+![Result](https://github.com/samuelsihotang1/Pemrograman-Berorientasi-Objek/assets/89495323/a5fadd9d-c45d-4ce0-bfc4-616b739ba74a)
 
 Pada contoh, revertion terhadap transaksi ```milky``` dengan id ```4``` tidak dapat dilakukan karena melebihi batas 10 menit. Berikut keluaran yang diberikan.
 
