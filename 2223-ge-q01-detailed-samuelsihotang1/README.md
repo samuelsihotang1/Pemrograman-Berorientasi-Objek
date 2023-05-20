@@ -21,6 +21,7 @@ show-account#jaksem
 ---
 
 ```
+![Result](https://github.com/samuelsihotang1/Pemrograman-Berorientasi-Objek/assets/89495323/795772cc-398d-4a90-b686-5f2ee4b24b37)
 
 Berikut adalah contoh luaran dari kombinasi input di atas.
 
@@ -51,6 +52,7 @@ show-accounts
 ---
 
 ```
+![Result](https://github.com/samuelsihotang1/Pemrograman-Berorientasi-Objek/assets/89495323/9f1c233e-db4a-42e8-a085-02c6d276f40c)
 
 Berikut adalah contoh keluaran yang dihasilkan.
 
