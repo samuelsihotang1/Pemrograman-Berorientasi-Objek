@@ -1,0 +1,62 @@
+student-add#12S21001#Dhino Turnip#S1 Sistem Informasi
+student-add#21S21001#Samuel Purba#S1 Manajemen Rekayasa
+student-add#12S21002#Marudut Tampubolon#S1 Sistem Informasi
+student-add#21S21099#Samwel Purba#S1 Manajemen Rekayasa
+course-add#KUS3001#Analisis Dampak Lingkungan#6#2
+course-add#10S2201#Aljabar Linier#4#3
+course-add#10S2202#Jaringan Komputer#4#3
+course-add#10S2203#Sistem Operasi#4#3
+course-add#12S2201#Analisis dan Desain Sistem#4#3
+course-add#12S2202#Interaksi Manusia-Komputer#4#3
+course-add#12S2201#Analisis dan Desain Sistem#4#3
+course-add#12S2203#Pemrograman Berorientasi Objek#4#3
+course-add#10S1002#Pemrograman Prosedural#2#2
+enroll#12S21001#KUS3001
+enroll#12S21001#10S2201
+enroll#12S21001#10S2202
+enroll#12S21001#10S2203
+enroll#12S21001#12S2201
+enroll#12S21001#12S2202
+enroll#12S21001#12S2203
+enroll#12S21002#10S1002
+enroll#12S21002#10S2201
+enroll#12S21002#10S2202
+enroll#12S21002#10S2203
+enroll#12S21002#12S2201
+enroll#12S21002#12S2202
+enroll#12S21002#12S2203
+student-show#12S21001
+course-show-all
+student-show#12S21002
+student-show-all
+---
+
+
+12S21001|Dhino Turnip|S1 Sistem Informasi
+10S2201|Aljabar Linier|4|3
+10S2202|Jaringan Komputer|4|3
+10S2203|Sistem Operasi|4|3
+12S2201|Analisis dan Desain Sistem|4|3
+12S2202|Interaksi Manusia-Komputer|4|3
+12S2203|Pemrograman Berorientasi Objek|4|3
+KUS3001|Analisis Dampak Lingkungan|6|2
+10S1002|Pemrograman Prosedural|2|2
+10S2201|Aljabar Linier|4|3
+10S2202|Jaringan Komputer|4|3
+10S2203|Sistem Operasi|4|3
+12S2201|Analisis dan Desain Sistem|4|3
+12S2202|Interaksi Manusia-Komputer|4|3
+12S2203|Pemrograman Berorientasi Objek|4|3
+KUS3001|Analisis Dampak Lingkungan|6|2
+12S21002|Marudut Tampubolon|S1 Sistem Informasi
+10S1002|Pemrograman Prosedural|2|2
+10S2201|Aljabar Linier|4|3
+10S2202|Jaringan Komputer|4|3
+10S2203|Sistem Operasi|4|3
+12S2201|Analisis dan Desain Sistem|4|3
+12S2202|Interaksi Manusia-Komputer|4|3
+12S2203|Pemrograman Berorientasi Objek|4|3
+12S21001|Dhino Turnip|S1 Sistem Informasi
+12S21002|Marudut Tampubolon|S1 Sistem Informasi
+21S21001|Samuel Purba|S1 Manajemen Rekayasa
+21S21099|Samwel Purba|S1 Manajemen Rekayasa

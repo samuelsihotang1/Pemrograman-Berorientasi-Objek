@@ -1,0 +1,38 @@
+Expected:
+12S21001|Dhino Turnip|S1 Sistem Informasi
+10S2201|Aljabar Linier|4|3
+10S2202|Jaringan Komputer|4|3
+10S2203|Sistem Operasi|4|3
+12S2201|Analisis dan Desain Sistem|4|3
+12S2202|Interaksi Manusia-Komputer|4|3
+12S2203|Pemrograman Berorientasi Objek|4|3
+KUS3001|Analisis Dampak Lingkungan|6|2
+12S21002|Marudut Tampubolon|S1 Sistem Informasi
+10S1002|Pemrograman Prosedural|2|2
+10S2201|Aljabar Linier|4|3
+10S2202|Jaringan Komputer|4|3
+10S2203|Sistem Operasi|4|3
+12S2201|Analisis dan Desain Sistem|4|3
+12S2202|Interaksi Manusia-Komputer|4|3
+12S2203|Pemrograman Berorientasi Objek|4|3
+
+
+
+
+Actual:
+12S21001|Dhino Turnip|S1 Sistem Informasi
+12S21001|Dhino Turnip|S1 Sistem Informasi|KUS3001|Analisis Dampak Lingkungan|6|2
+12S21001|Dhino Turnip|S1 Sistem Informasi|10S2201|Aljabar Linier|4|3
+12S21001|Dhino Turnip|S1 Sistem Informasi|10S2202|Jaringan Komputer|4|3
+12S21001|Dhino Turnip|S1 Sistem Informasi|10S2203|Sistem Operasi|4|3
+12S21001|Dhino Turnip|S1 Sistem Informasi|12S2201|Analisis dan Desain Sistem|4|3
+12S21001|Dhino Turnip|S1 Sistem Informasi|12S2202|Interaksi Manusia-Komputer|4|3
+12S21001|Dhino Turnip|S1 Sistem Informasi|12S2203|Pemrograman Berorientasi Objek|4|3
+12S21002|Marudut Tampubolon|S1 Sistem Informasi
+12S21002|Marudut Tampubolon|S1 Sistem Informasi|10S1002|Pemrograman Prosedural|2|2
+12S21002|Marudut Tampubolon|S1 Sistem Informasi|10S2201|Aljabar Linier|4|3
+12S21002|Marudut Tampubolon|S1 Sistem Informasi|10S2202|Jaringan Komputer|4|3
+12S21002|Marudut Tampubolon|S1 Sistem Informasi|10S2203|Sistem Operasi|4|3
+12S21002|Marudut Tampubolon|S1 Sistem Informasi|12S2201|Analisis dan Desain Sistem|4|3
+12S21002|Marudut Tampubolon|S1 Sistem Informasi|12S2202|Interaksi Manusia-Komputer|4|3
+12S21002|Marudut Tampubolon|S1 Sistem Informasi|12S2203|Pemrograman Berorientasi Objek|4|3
