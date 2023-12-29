@@ -16,4 +16,4 @@ In the fourth semester, students in the Information Systems program at Del Insti
 
 ## `Programming Exam Tasks`
 1. [M01 | Mid Exam](https://github.com/samuelsihotang1/Pemrograman-Berorientasi-Objek/tree/main/2223-ge-m01-advanced-transactions-samuelsihotang1)
-2. 🚧 on progress
+2. [F01 | Final Exam](https://github.com/samuelsihotang1/Pemrograman-Berorientasi-Objek/tree/main/2223-ge-f01-study-plan-samuelsihotang1)
